@@ -1,6 +1,28 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
 #main {
     background-color: #f0f8ff;
-    padding: 50px;
+    padding: 100px;
+}
+
+header {
+    background-color: black;
+    padding-top: 5px;    
+    padding-left: 15px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+header > p {
+    font-size: 40px;
+    font-weight: bold;
+    width: 50%;
+
 }
 
 #formDiv {

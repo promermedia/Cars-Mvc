@@ -14,6 +14,9 @@
     <title>Document</title>
   </head>
   <body>
+    <header>
+      <p>Cars MVC</p>      
+    </header>
     <div class="container" id="main"></div>
     <button class="btn btn-primary" id="showHide" onclick="toggle(this)">
       Show Form
@@ -27,7 +30,7 @@
         <option value="SUV">SUV</option>
         <option value="Mid-Size">Mid-Size</option>
         <option value="Luxury">Luxury</option>
-      </select>      
+      </select>
       <select class="form-control formElements" name="" id="make">
         <option value="">Select a Make</option>
         <option value="Acura">Acura</option>
@@ -75,14 +78,23 @@
         <option value="Volkswagen">Volkswagen</option>
         <option value="Volvo">Volvo</option>
       </select>
-      <input class="form-control formElements" placeholder="Enter the Model" type="text"id="model"/>
-      <input class="form-control formElements" placeholder="Enter the Price" type="text" id="price"/>
+      <input
+        class="form-control formElements"
+        placeholder="Enter the Model"
+        type="text"
+        id="model"
+      />
+      <input
+        class="form-control formElements"
+        placeholder="Enter the Price"
+        type="text"
+        id="price"
+      />
       <input class="form-control formElements" type="file" id="image" />
       <button class="btn btn-success formElements" onclick="addCar()">
         Submit
       </button>
     </div>
-
 
     <script src="js/model.js"></script>
     <script src="js/view.js"></script>
