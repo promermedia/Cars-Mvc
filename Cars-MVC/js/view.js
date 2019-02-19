@@ -5,10 +5,10 @@ function getInputsFromDom() {
   inputElements.theMake = document.getElementById("make");
   inputElements.theModel = document.getElementById("model");
   inputElements.thePrice = document.getElementById("price");
-  inputElements.theimage = document.getElementById("image");  
+  inputElements.theimage = document.getElementById("image");
 }
 
-function cleanInputs(){
+function cleanInputs() {
   inputElements.theCategory.value = "";
   inputElements.theMake.value = "";
   inputElements.theModel.value = "";
@@ -27,30 +27,31 @@ function showHide(button) {
   }
 }
 
-
 function createHTML() {
-  var mainDiv = document.getElementById("main");
-  var toAppend = "";
+  if (cars != null) {
+    var mainDiv = document.getElementById("main");
+    var toAppend = "";
 
-  mainDiv.innerHTML = "";
+    mainDiv.innerHTML = "";
 
-  cars.forEach(function(car, i) {
-    var newDiv =
-      '<div id="car' +
-      i +
-      '" class="eachCar"><h3 class="category">' +
-      car.category +
-      '</h3><button class="btn btn-danger button" onclick="deleteCar(this)">X</button><img src="assets/images/' +
-      car.image +
-      '" alt=""><p class="make">' +
-      car.make +
-      '</p><p class="model">' +
-      car.model +
-      '</p><p class="price">' +
-      car.price +
-      "</p></div>";
-    toAppend += newDiv;
-  });
-  
-  mainDiv.innerHTML = toAppend;
+    cars.forEach(function(car, i) {
+      var newDiv =
+        '<div id="car' +
+        i +
+        '" class="eachCar"><h3 class="category">' +
+        car.category +
+        '</h3><button class="btn btn-danger button" onclick="deleteCar(this)">X</button><img src="assets/images/' +
+        car.image +
+        '" alt=""><p class="make">' +
+        car.make +
+        '</p><p class="model">' +
+        car.model +
+        '</p><p class="price">' +
+        car.price +
+        "</p></div>";
+      toAppend += newDiv;
+    });
+
+    mainDiv.innerHTML = toAppend;
+  }
 }

@@ -1,2 +1,5 @@
-getJson();
-createHTML()
+if (getJson()) {
+  createHTML();
+} ;
+
+
