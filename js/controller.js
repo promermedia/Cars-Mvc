@@ -1,3 +1,9 @@
+function init() {
+  if (getJson()) {
+    createHTML();
+  };
+};
+
 function addCar() {
   getInputsFromDom();
   createCarObj();

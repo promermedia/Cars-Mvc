@@ -1,10 +1,9 @@
 var cars = [];
 
 function getJson() {
+  var carsJson = localStorage.getItem("allCars");
   var response = false;
-  if (
-    localStorage.getItem("allCars") != null) {
-    var carsJson = localStorage.getItem("allCars");
+  if (carsJson != null) {    
     cars = JSON.parse(carsJson);
     response = true;
   }
