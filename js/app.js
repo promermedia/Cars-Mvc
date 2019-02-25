@@ -1,5 +1,3 @@
-if (getJson()) {
-  createHTML();
-} ;
+init();
 
 
